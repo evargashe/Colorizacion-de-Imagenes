@@ -3,7 +3,7 @@
 * [CUDA 10.1](https://developer.nvidia.com/cuda-10.1-download-archive-update2)
 * Python3
 * Pytorch >= 1.5
-* Detectron2
+* Ultralytics (Yolov8)
 * OpenCV-Python
 * Pillow/scikit-image
 * Please refer to the [env.yml](env.yml) for detail dependencies.
@@ -11,8 +11,8 @@
 ## Getting Started
 1. Clone this repo:
 ```sh
-git clone https://github.com/ericsujw/InstColorization
-cd InstColorization
+git clone https://github.com/evargashe/Colorizacion-de-Imagenes.git
+cd Colorizacion-de-Imagenes
 ```
 2. Install [conda](https://www.anaconda.com/).
 3. Install all the dependencies
@@ -71,23 +71,8 @@ This is a 3 stage training process.
 3. Please follow the command below to colorize all the images in `example` foler based on the weight placed in `coco_mask`.
 
     ```
-    python test_fusion.py --name test_fusion --sample_p 1.0 --model fusion --fineSize 256 --test_img_dir example --results_img_dir results
+    python test_fusion.py --name test_fusion --sample_p 1.0 --model fusion --fineSize 128 --test_img_dir example --results_img_dir results
     ```
     All the colorized results would save in `results` folder.
 
-## License
-This work is licensed under MIT License. See [LICENSE](LICENSE) for details. 
 
-## Citation
-If you find our code/models useful, please consider citing our paper:
-```
-@inproceedings{Su-CVPR-2020,
-  author = {Su, Jheng-Wei and Chu, Hung-Kuo and Huang, Jia-Bin},
-  title = {Instance-aware Image Colorization},
-  booktitle = {IEEE Conference on Computer Vision and Pattern Recognition (CVPR)},
-  year = {2020}
-}
-```
-
-## Acknowledgments
-Our code borrows heavily from the amazing [colorization-pytorch](https://github.com/richzhang/colorization-pytorch) repository.
