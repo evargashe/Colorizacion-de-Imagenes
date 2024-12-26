@@ -1,0 +1,5 @@
+torch>=1.5
+detectron2
+opencv-python
+Pillow
+scikit-image
